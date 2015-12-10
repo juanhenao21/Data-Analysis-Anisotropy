@@ -1,0 +1,11 @@
+#!/bin/bash
+
+cd 00Algorithms
+
+python3 A01a_Magnetization_Curves_k01.py
+
+python3 A02a_Tc_vs_d_k01.py
+
+python3 A03a_Z_projection_k01.py
+
+python3 A04a_Mean_Z_projection_k01.py
