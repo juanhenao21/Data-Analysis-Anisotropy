@@ -81,7 +81,7 @@ for fileGamma in files:
         print("d = ", d)
 
         plt.subplot(211)
-        plt.plot(temp, mag, label= "$d = %s$" % (d, ))
+        plt.plot(temp, mag, label= "$d = %s$" % (d, ), linewidth=2)
         plt.legend()
         plt.xlabel('Temperatura (K)')
         plt.ylabel('Magnetización')
@@ -92,11 +92,12 @@ for fileGamma in files:
         params, corr = curve_fit(magnetization, temp, mag, p0 = (450, 0.5, 1.0))
 
         plt.subplot(212)
-        plt.plot(temp,magnetization(temp,*params), '-g', linewidth=2)#, label = 'fit')
-        plt.plot(temp, mag, 'ok', ms=2)#, label = "Magnetization")
+        plt.plot(temp,magnetization(temp,*params), label = "$d = %s$" % (d, ),linewidth=2)
+        plt.plot(temp, mag, 'ok', ms=2)
+        plt.legend()
         plt.xlabel('Temperatura (K)')
         plt.ylabel('Magnetización')
-        plt.grid(False)
+        plt.grid(True)
 
         print('Tc (d',d,') = ', params[0])
         print('Ec (d',d,') = ', params[1], '\n')
