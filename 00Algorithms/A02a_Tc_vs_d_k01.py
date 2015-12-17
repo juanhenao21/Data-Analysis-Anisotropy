@@ -21,7 +21,7 @@ import os
 # In[14]:
 
 # Glob sirve para buscar archivos
-files = {g: sorted(glob.glob('../02Critical_Values/01aTc_k01_%s.txt' % g)) for g in ('0.037', '0.111', '0.333', '1.000')}#, '3.000', '9.000')}
+files = {g: sorted(glob.glob('../02Critical_Values/01aTc_k01_%s.txt' % g)) for g in ('0.037', '0.111', '0.333', '1.000', '3.000', '9.000')}
 files = collections.OrderedDict(sorted(files.items()))
         
 os.makedirs('../03Tc_Curves')
